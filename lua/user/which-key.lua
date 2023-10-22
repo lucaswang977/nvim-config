@@ -8,7 +8,15 @@ local opts = {
 }
 
 local mappings = {
+  ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["c"] = { "<cmd>bdelete!<CR>", "Close Buffer" },
+
+  ["f"] = {
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Find files",
+  },
 }
 
 local wk = require("which-key")
