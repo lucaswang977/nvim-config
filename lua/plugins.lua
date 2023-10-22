@@ -12,6 +12,9 @@ return {
     config = function()
       require('lualine').setup()
     end,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
   },
   {
     "folke/which-key.nvim",
@@ -19,6 +22,22 @@ return {
     init = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
+    end,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = true,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require('bufferline').setup()
     end,
   }
 }
