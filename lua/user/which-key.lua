@@ -17,6 +17,8 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
   },
+  ["p"] = { "<cmd>bprev<CR>", "Previous buffer"},
+  ["n"] = { "<cmd>bnext<CR>", "Next buffer"},
 }
 
 local wk = require("which-key")

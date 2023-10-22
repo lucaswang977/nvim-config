@@ -8,3 +8,4 @@
 - lualine, bufferline
 - nvim-tree for file explorer
 - Telescope for file searches
+- Autopair, indentline, alpha 
