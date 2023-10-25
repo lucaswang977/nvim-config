@@ -9,3 +9,5 @@
 - nvim-tree for file explorer
 - Telescope for file searches
 - Autopair, indentline, alpha 
+- leap for fast moving
+- lsp-zero for LSP

@@ -1,6 +1,6 @@
 require "user.options"
-require "user.keymaps"
 require "user.lazy"
-require "user.which-key"
 require "user.nvim-tree"
 require "user.telescope"
+require "user.lsp"
+require "user.keymaps"

@@ -8,6 +8,9 @@ local options = {
   relativenumber = false,
 }
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 for k,v in pairs(options) do
   vim.opt[k] = v
 end

@@ -17,11 +17,11 @@ return {
     },
   },
   {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
+    'numToStr/Comment.nvim',
+    opts = {},
+    lazy = false,
+    config = function()
+      require('Comment').setup()
     end,
   },
   {
@@ -68,5 +68,35 @@ return {
     config = function ()
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
-  }
+  },
+  {
+    "EtiamNullam/deferred-clipboard.nvim",
+    config = function()
+      require('deferred-clipboard').setup({
+        fallback = 'unnamedplus',
+      })
+    end
+  },
+  {
+    "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat" },
+    config = function ()
+        require 'leap'.add_default_mappings()
+    end
+  },
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {'williamboman/mason.nvim'},           -- Optional
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    }
+  },
 }
