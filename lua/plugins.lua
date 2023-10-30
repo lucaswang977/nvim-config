@@ -70,12 +70,10 @@ return {
     end
   },
   {
-    "EtiamNullam/deferred-clipboard.nvim",
+    "ojroques/nvim-oscyank",
     config = function()
-      require('deferred-clipboard').setup({
-        fallback = 'unnamedplus',
-      })
-    end
+      vim.keymap.set('v', '<leader>y', require('osc52').copy_visual)
+    end,
   },
   {
     "ggandor/leap.nvim",
