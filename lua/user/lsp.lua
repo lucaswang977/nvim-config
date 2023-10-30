@@ -19,7 +19,6 @@ lsp.set_sign_icons({
 lsp.setup()
 
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 local cmp_format = require('lsp-zero').cmp_format()
 
 require('luasnip.loaders.from_vscode').lazy_load()
@@ -29,14 +28,10 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'luasnip'},
   },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-  }),
-  formatting = cmp_format,
-})
-
-cmp.setup({
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
     ['<Tab>'] = cmp.mapping.confirm({select = false}),
@@ -44,5 +39,6 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-  })
+  }),
+  formatting = cmp_format,
 })
