@@ -79,13 +79,19 @@ return {
     "ggandor/leap.nvim",
     dependencies = { "tpope/vim-repeat" },
     config = function ()
-        require 'leap'.add_default_mappings()
+      require 'leap'.add_default_mappings()
     end
   },
   {
-    "ellisonleao/glow.nvim", 
-    config = true, 
+    "ellisonleao/glow.nvim",
+    config = true,
     cmd = "Glow"
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function ()
+      require("symbols-outline").setup()
+    end
   },
   {
     'VonHeikemen/lsp-zero.nvim',

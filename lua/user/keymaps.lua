@@ -16,6 +16,7 @@ keymap("n", "[b", ":bprev<CR>", opts)
 keymap("n", "]b", ":bnext<CR>", opts)
 
 keymap("n", "<leader>le", ":EslintFixAll<CR>", opts)
+keymap("n", "<leader>lS", ":SymbolsOutline<CR>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 
