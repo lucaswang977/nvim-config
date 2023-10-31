@@ -83,6 +83,11 @@ return {
     end
   },
   {
+    "ellisonleao/glow.nvim", 
+    config = true, 
+    cmd = "Glow"
+  },
+  {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
     dependencies = {
