@@ -1,22 +1,29 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero')
 
-lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
 
-lsp.set_sign_icons({
+lsp_zero.set_sign_icons({
   error = ' ✘',
   warn = ' ▲',
   hint = ' ⚑',
   info = ' »'
 })
 
-lsp.setup()
+lsp_zero.setup()
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  -- Replace the language servers listed here
+  -- with the ones you want to install
+  ensure_installed = {'lua_ls', 'tsserver', 'eslint', 'tailwindcss', 'emmet_language_server'},
+  handlers = {
+    lsp_zero.default_setup,
+  }
+})
 
 local cmp = require('cmp')
 local cmp_format = require('lsp-zero').cmp_format()
@@ -42,3 +49,5 @@ cmp.setup({
   }),
   formatting = cmp_format,
 })
+
+

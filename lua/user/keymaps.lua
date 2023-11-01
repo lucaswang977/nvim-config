@@ -3,7 +3,7 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<leader>q", ":q<CR>", {})
+keymap("n", "<leader>q", ":qall<CR>", {})
 keymap("n", "<leader>w", ":w<CR>", {})
 keymap("n", "<leader>c", ":bdelete<CR>", {})
 

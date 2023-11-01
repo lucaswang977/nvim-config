@@ -94,6 +94,12 @@ return {
     end
   },
   {
+    "simrat39/symbols-outline.nvim",
+    config = function ()
+      require("symbols-outline").setup()
+    end
+  },
+  {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
     dependencies = {
@@ -107,5 +113,44 @@ return {
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
     }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+      configs.setup({
+        ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "typescript", "tsx", "kdl", "prisma" },
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    config = function ()
+      local rainbow_delimiters = require 'rainbow-delimiters'
+
+      vim.g.rainbow_delimiters = {
+          strategy = {
+              [''] = rainbow_delimiters.strategy['global'],
+              vim = rainbow_delimiters.strategy['local'],
+          },
+          query = {
+              [''] = 'rainbow-delimiters',
+              lua = 'rainbow-blocks',
+          },
+          highlight = {
+              'RainbowDelimiterRed',
+              'RainbowDelimiterYellow',
+              'RainbowDelimiterBlue',
+              'RainbowDelimiterOrange',
+              'RainbowDelimiterGreen',
+              'RainbowDelimiterViolet',
+              'RainbowDelimiterCyan',
+          },
+      }
+    end
   },
 }
