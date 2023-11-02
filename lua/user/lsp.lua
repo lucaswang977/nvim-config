@@ -1,4 +1,4 @@
-local lsp_zero = require('lsp-zero')
+local lsp_zero = require('lsp-zero').preset({})
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
@@ -39,6 +39,10 @@ cmp.setup({
   completion = {
     completeopt = 'menu,menuone,noinsert'
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({select = false}),
     ['<Tab>'] = cmp.mapping.confirm({select = false}),
@@ -49,5 +53,3 @@ cmp.setup({
   }),
   formatting = cmp_format,
 })
-
-
