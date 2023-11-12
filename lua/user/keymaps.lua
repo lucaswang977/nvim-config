@@ -5,7 +5,7 @@ keymap("", "<Space>", "<Nop>", opts)
 
 keymap("n", "<leader>q", ":qall<CR>", {})
 keymap("n", "<leader>w", ":w<CR>", {})
-keymap("n", "<leader>c", ":bdelete<CR>", {})
+keymap("n", "<leader>c", ":Bdelete<CR>", {})
 
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -17,6 +17,11 @@ keymap("n", "]b", ":bnext<CR>", opts)
 
 keymap("n", "<leader>le", ":EslintFixAll<CR>", opts)
 keymap("n", "<leader>lS", ":SymbolsOutline<CR>", opts)
+
+keymap("n", "<C-down>", ":MoveLine(1)<CR>", opts)
+keymap("n", "<C-up>", ":MoveLine(-1)<CR>", opts)
+keymap("v", "<C-down>", ":MoveBlock(1)<CR>", opts)
+keymap("v", "<C-up>", ":MoveBlock(-1)<CR>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 

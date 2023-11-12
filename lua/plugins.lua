@@ -217,4 +217,10 @@ return {
 			require("yanky").setup({})
 		end,
 	},
+	{
+		"fedepujol/move.nvim",
+	},
+	{
+		"moll/vim-bbye",
+	},
 }
