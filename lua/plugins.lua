@@ -194,7 +194,7 @@ return {
 					lua = { "stylua" },
 					-- Conform will run multiple formatters sequentially
 					python = { "isort", "black" },
-					-- Use a sub-list to run only the first available formatter
+					-- Use a sub-list to run only t1e first available formatter
 					javascript = { { "prettierd", "prettier" } },
 				},
 			})
@@ -222,5 +222,26 @@ return {
 	},
 	{
 		"moll/vim-bbye",
+	},
+	{
+		"kylec1ui/nvim-surround",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
 	},
 }

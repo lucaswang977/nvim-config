@@ -1,6 +1,6 @@
 # My Neovim Configuration Setup from Scratch
 
-## Current state
+## Current config & plugins 
 - Minimalist option settings, key mappings
 - Leader key is remapped to <space>
 - Lazy.nvim is the plugin management
@@ -12,3 +12,10 @@
 - leap for fast moving
 - lsp-zero for LSP
 - Line / block moving
+- Tint color for activated window
+- Auto formatting on save
+- Remeber vim editing position
+- Buffer closing problem fixes (bbye)
+- Quickly surround word or line with characters (surround)
+- Show RBG colors (colorizer)
+- Show git signs (gitsign)
