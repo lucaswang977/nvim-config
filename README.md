@@ -19,3 +19,4 @@
 - Quickly surround word or line with characters (surround)
 - Show RBG colors (colorizer)
 - Show git signs (gitsign)
+- TODO comments (todo-comments)

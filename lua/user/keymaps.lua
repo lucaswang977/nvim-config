@@ -33,3 +33,5 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 local api = require("nvim-tree.api")
 vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
+
+vim.keymap.set("n", "<leader>ft", ":TodoTelescope keywords=TODO,FIX<CR>", opts)
