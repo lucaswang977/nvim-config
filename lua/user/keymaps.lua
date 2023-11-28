@@ -3,7 +3,8 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<leader>q", ":qall<CR>", {})
+keymap("n", "<leader>q", ":q<CR>", {})
+keymap("n", "<leader>Q", ":qall<CR>", {})
 keymap("n", "<leader>w", ":w<CR>", {})
 keymap("n", "<leader>c", ":Bdelete<CR>", {})
 
@@ -35,3 +36,10 @@ local api = require("nvim-tree.api")
 vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
 
 vim.keymap.set("n", "<leader>ft", ":TodoTelescope keywords=TODO,FIX<CR>", opts)
+
+-- ChatGPT related
+vim.keymap.set("n", "<leader>cc", ":GpChatNew<CR>", opts)
+vim.keymap.set("v", "<leader>cc", ":<C-u>'<,'>GpChatNew<CR>", opts)
+
+vim.keymap.set("n", "<leader>cr", ":GpChatRespond<CR>", opts)
+vim.keymap.set("n", "<leader>cf", ":GpChatFinder<CR>", opts)
