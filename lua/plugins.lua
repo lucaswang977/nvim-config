@@ -91,13 +91,9 @@ return {
 	{
 		"simrat39/symbols-outline.nvim",
 		config = function()
-			require("symbols-outline").setup()
-		end,
-	},
-	{
-		"simrat39/symbols-outline.nvim",
-		config = function()
-			require("symbols-outline").setup()
+			require("symbols-outline").setup({
+				autofold_depth = 0,
+			})
 		end,
 	},
 	{

@@ -38,8 +38,9 @@ vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
 vim.keymap.set("n", "<leader>ft", ":TodoTelescope keywords=TODO,FIX<CR>", opts)
 
 -- ChatGPT related
-vim.keymap.set("n", "<leader>cc", ":GpChatNew<CR>", opts)
-vim.keymap.set("v", "<leader>cc", ":<C-u>'<,'>GpChatNew<CR>", opts)
+vim.keymap.set("n", "<leader>cc", ":GpChatToggle<CR>", opts)
+vim.keymap.set("n", "<leader>cn", ":GpChatNew<CR>", opts)
+vim.keymap.set("v", "<leader>cn", ":<C-u>'<,'>GpChatNew<CR>", opts)
 
 vim.keymap.set("n", "<leader>cr", ":GpChatRespond<CR>", opts)
 vim.keymap.set("n", "<leader>cf", ":GpChatFinder<CR>", opts)
