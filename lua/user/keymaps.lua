@@ -44,3 +44,8 @@ vim.keymap.set("v", "<leader>cn", ":<C-u>'<,'>GpChatNew newtab<CR>", opts)
 
 vim.keymap.set("n", "<leader>cr", ":GpChatRespond<CR>", opts)
 vim.keymap.set("n", "<leader>cf", ":GpChatFinder<CR>", opts)
+
+-- Auto session
+vim.keymap.set("n", "<leader>ss", ":SessionSave<CR>", opts)
+vim.keymap.set("n", "<leader>sr", ":SessionRestore<CR>", opts)
+vim.keymap.set("n", "<leader>sd", ":SessionDelete<CR>", opts)
