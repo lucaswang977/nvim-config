@@ -20,3 +20,4 @@
 - Show RBG colors (colorizer)
 - Show git signs (gitsign)
 - TODO comments (todo-comments)
+- ChatGPT integration (gp)
