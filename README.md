@@ -21,3 +21,5 @@
 - Show git signs (gitsign)
 - TODO comments (todo-comments)
 - ChatGPT integration (gp)
+- Add toast type message (noice)
+- Add better renaming support (inc-rename)
