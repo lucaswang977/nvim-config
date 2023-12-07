@@ -323,7 +323,21 @@ return {
 		},
 		config = function()
 			require("noice").setup({
-				presets = { inc_rename = true },
+				presets = {
+					bottom_search = true,
+					inc_rename = true,
+					lsp_doc_border = true,
+				},
+				routes = {
+					{
+						filter = { find = "No information available" },
+						opts = { skip = true },
+					},
+					{
+						filter = { find = "error invoking xclip" },
+						opts = { skip = true },
+					},
+				},
 			})
 		end,
 	},
