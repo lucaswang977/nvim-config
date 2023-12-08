@@ -188,10 +188,8 @@ return {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					-- Conform will run multiple formatters sequentially
-					python = { "isort", "black" },
-					-- Use a sub-list to run only t1e first available formatter
 					javascript = { { "prettierd", "prettier" } },
+					json = { "jq" },
 				},
 			})
 
@@ -331,6 +329,10 @@ return {
 				routes = {
 					{
 						filter = { find = "No information available" },
+						opts = { skip = true },
+					},
+					{
+						filter = { find = "clipboard: No provider" },
 						opts = { skip = true },
 					},
 					{
